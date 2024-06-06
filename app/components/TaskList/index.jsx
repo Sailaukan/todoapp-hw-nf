@@ -15,9 +15,7 @@ const TaskList = (props) => {
 
 
   return (
-    <div>
-      {filteredArray.map(task => (
-        <>
+      filteredArray.map(task => (
           <TaskItem
             key={task.id}
             text={task.text}
@@ -26,9 +24,7 @@ const TaskList = (props) => {
             removeTask={props.removeTask}
             handleChecked={props.handleChecked}
           />
-        </>
-      ))}
-    </div>
+      ))
   );
 };
 
