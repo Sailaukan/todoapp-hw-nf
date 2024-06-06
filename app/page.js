@@ -7,9 +7,13 @@ export default function Home() {
   const [filter, setFilter] = useState(1);
 
   const [tasks, setTasks] = useState(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    return storedTasks ? JSON.parse(storedTasks) : [];
+    if (typeof window !== 'undefined') {
+      const storedTasks = localStorage.getItem('tasks');
+      return storedTasks ? JSON.parse(storedTasks) : [];
+    }
+    return [];
   });
+  
 
   const [newTask, setNewTask] = useState('');
 

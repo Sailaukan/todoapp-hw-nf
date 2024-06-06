@@ -30,24 +30,6 @@ const TaskList = (props) => {
       ))}
     </div>
   );
-
-
-  // return (
-  //   <div>
-  //     {props.tasks.map(task => (
-  //       <>
-  //         <TaskItem
-  //           key={task.id}
-  //           text={task.text}
-  //           id={task.id}
-  //           completed={task.completed}
-  //           removeTask={props.removeTask}
-  //           handleChecked={props.handleChecked}
-  //         />
-  //       </>
-  //     ))}
-  //   </div>
-  // );
 };
 
 export default TaskList;
